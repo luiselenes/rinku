@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Luis\\Documents\\visualstudio\\rinku\\rinku\\rinku.csproj": {}
+    "C:\\Users\\Luis\\Documents\\visualstudio\\rinku\\rinku\\rinku.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Luis\\Documents\\visualstudio\\rinku\\rinku\\rinku.csproj": {
+    "C:\\Users\\Luis\\Documents\\visualstudio\\rinku\\rinku\\rinku.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Luis\\Documents\\visualstudio\\rinku\\rinku\\rinku.csproj",
+        "projectUniqueName": "C:\\Users\\Luis\\Documents\\visualstudio\\rinku\\rinku\\rinku.csproj",
         "projectName": "rinku",
-        "projectPath": "c:\\Users\\Luis\\Documents\\visualstudio\\rinku\\rinku\\rinku.csproj",
+        "projectPath": "C:\\Users\\Luis\\Documents\\visualstudio\\rinku\\rinku\\rinku.csproj",
         "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Luis\\Documents\\visualstudio\\rinku\\rinku\\obj\\",
+        "outputPath": "C:\\Users\\Luis\\Documents\\visualstudio\\rinku\\rinku\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",

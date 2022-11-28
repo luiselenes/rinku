@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bnIlZKdYSSaVTRtYfhe3W78chNvMd3G9dMboCsxExU3HGY0+6MhmLpZzKXeBQz6rLDeJioMi1cA8zPOdJpmUwg==",
+  "dgSpecHash": "mTkQcqOAWHhReherdfzgL9YS6Lz05l+06Heix6fSbBvtWB/zGyatrfcZRTtcjVN6Jwt8+U+/lE5daBVuqjviPA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Luis\\Documents\\visualstudio\\rinku\\rinku\\rinku.csproj",
+  "projectFilePath": "C:\\Users\\Luis\\Documents\\visualstudio\\rinku\\rinku\\rinku.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luis\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Luis\\.nuget\\packages\\fluentvalidation\\10.2.3\\fluentvalidation.10.2.3.nupkg.sha512",
