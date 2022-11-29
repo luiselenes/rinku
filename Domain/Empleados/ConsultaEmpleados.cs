@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+
 using rinku.Models;
 
 namespace rinku.Domain
@@ -22,14 +23,12 @@ namespace rinku.Domain
         }
         public async Task<List<Empleados>> Handle(ConsultaEmpleados request, CancellationToken cancellationToken)
         {
-           
-            var usuariolist = await context.empleado.Include(emp => emp.num_empleados).ToListAsync();
-            if(usuariolist==null)
+            var empleadoslist = await context.empleados.ToListAsync();
+            if(empleadoslist==null)
             return null;
-            return usuariolist.ToList();
+            return empleadoslist.ToList();
         }
     }
-
 }
 
 

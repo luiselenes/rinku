@@ -1,0 +1,42 @@
+@page
+@using rinku.Pages.Empleados
+@model CrearModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h1> Registras un empleado </h1>
+
+<div asp-validation-summary="All"></div>
+<form method="POST">
+  <div class="form-group">
+   
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control"
+          name="nombre" id="nombre" aria-describedby="">
+      </div>
+
+    <div class="form-group">
+      <label for="appaterno">Apellido Paterno</label>
+      <input type="text" class="form-control"
+          name="appaterno" id="appaterno" aria-describedby="">
+      
+    </div>
+    
+    <div class="form-group">
+      <label for="apmaterno">Apellido Materno</label>
+      <input type="" class="form-control"
+          name="apmaterno" id="apmaterno" aria-describedby="">
+          
+    </div>
+    <div class="form-group">
+      <label for="rol">Rol</label>
+      <select name="rol" class="form-control" id="rol" aria-describedby="">
+        <option value="chofer">chofer</option>
+        <option value="cargador" selected>cargador</option>
+        <option value="auxiliar">auxiliar</option>
+      </select>
+    </div>
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Crear</button>
+</form>

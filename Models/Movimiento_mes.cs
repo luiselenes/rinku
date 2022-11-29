@@ -12,15 +12,15 @@ namespace rinku.Models
     {
         [Key]
         public int id_mv { set; get; }
-        public int id_empleado { set; get; }
-        public int num_mes { get; set; }
-        public float horas_trabajadas { get; set; }
-        public float pago_entregas { get; set; }
-        public float pago_bono { get; set; }
-        public float vale { get; set; }
-        public float retencion { get; set; }
+        public int num_empleados { set; get; }
+        public string mes { get; set; }
         public int catidad_entregas { get; set; }
-        public float sueldo_total { get; set; }
+        public double horas_trabajadas { get; set; }
+        public double pago_entregas { get; set; }
+        public double pago_bono { get; set; }
+        public double vale { get; set; }
+        public double ISR { get; set; }
+        public double sueldo_total { get; set; }
 
     }
 }

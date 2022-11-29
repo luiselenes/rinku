@@ -1,0 +1,51 @@
+@page 
+@using rinku.Pages.Movimientosmes
+@model IndexModel
+@{
+    var i = 1;
+} 
+<h2>Sueldos del mes</h2>
+<div class="row"> 
+    <a asp-page="./Crear" role="button" class="btn btn-success">Crear</a>
+</div>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Numero Empleado</th>
+        <th scope="col">Mes</th>
+        <th scope="col">Cantidad De entregas en mes</th>
+        <th scope="col">Horas trabajadas</th>
+        <th scope="col">Pago por entregas</th>
+        <th scope="col">Bono</th>
+        <th scope="col">vale</th>
+        <th scope="col">Descuentoo ISR</th>
+        <th scope="col">Sueldo total</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var mv in Model.movimiento_Mes)
+    {
+    <tr>
+      <td>@i</td>
+      <td>@mv.num_empleados</td>
+      <td>@mv.mes</td>
+      <td>@mv.catidad_entregas</td>
+      <td>@mv.horas_trabajadas</td>
+      <td>@mv.pago_entregas</td>
+      <td>@mv.pago_bono</td>
+      <td>@mv.vale</td>
+      <td>@mv.ISR</td>
+      <td>@mv.sueldo_total</td>
+       <td><a asp-page="./Borrar" asp-route-id_mv="@mv.id_mv" class="btn btn-info">Borrar </a>
+        <a asp-page="./Actualizar" asp-route-id_mv="@mv.id_mv" class="btn btn-info">Editar </a>
+    </td> 
+    </tr>
+        i++;
+    }
+   
+  </tbody>
+</table>
+
+

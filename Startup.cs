@@ -25,23 +25,14 @@ namespace rinku
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-             services.AddRazorPages();
+            services.AddRazorPages();
             services.AddMediatR(typeof(Startup));
      
             
             services.AddDbContext<rinkuContext>(options =>
-            options.UseMySQL(
-                 Configuration.GetConnectionString("bdconnection")));
+            options.UseMySQL(Configuration.GetConnectionString("bdconnection")));
                  //Environment.GetEnvironmentVariable("DB_CONNECTION_STRING")));
             services.AddControllers();
-           /* var mvc =services.AddRazorPages();
-              services.AddMvc(setup => {
-      //...mvc setup...
-                })
-                .AddFluentValidation(fl => 
-                fl.RegisterValidatorsFromAssembly((typeof(Startup)).Assembly)
-                );*/
 
 
         }
@@ -70,6 +61,9 @@ namespace rinku
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
+
+
             });
         }
     }

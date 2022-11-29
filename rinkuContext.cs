@@ -7,7 +7,7 @@ namespace rinku
         public rinkuContext(DbContextOptions<rinkuContext>options) :base(options){
             
         }
-        public DbSet<Empleados> empleado {set;get;}
-        public DbSet<Movimiento_mes> movimientomes { get; set; }
+        public DbSet<Empleados> empleados {set;get;}
+        public DbSet<Movimiento_mes> movimientos_mes { get; set; }
     }
 }

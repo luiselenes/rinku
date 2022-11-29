@@ -12,12 +12,10 @@ namespace rinku.Domain
 {
     public class ActualizarEmpleado : IRequest<bool>
     {
-
         public int num_empleados { set; get; }
         public string nombre { set; get; }
         public string appaterno { set; get; }
         public string apmaterno { set; get; }
-        public DateTime fecha_nacimineto { set; get; }
         public string rol { set; get; }
         public bool activo { get; set; }
     }
@@ -26,7 +24,6 @@ namespace rinku.Domain
     {
         private readonly rinkuContext context;
 
-
         public ActualizarEmpleadoHandler(rinkuContext context)
         {
             this.context = context;
@@ -34,19 +31,15 @@ namespace rinku.Domain
         public async Task<bool> Handle(ActualizarEmpleado request, CancellationToken cancellationToken)
         {
 
-
             var empleado = new Empleados();
-            var dtempleado = context.empleado.Where(emp => emp.num_empleados == request.num_empleados).FirstOrDefault();
-            if (dtempleado != null){
-                return false;
-            }else{
-                empleado.nombre = request.nombre;
-                empleado.appaterno = request.appaterno;
-                empleado.apmaterno = request.apmaterno;
-                empleado.fecha_nacimiento = request.fecha_nacimineto;
-                empleado.rol = request.rol;
-                empleado.activo = request.activo;
-            }
+            var dtempleado = context.empleados.Where(emp => emp.num_empleados == request.num_empleados).FirstOrDefault();
+
+
+                dtempleado.nombre = request.nombre;
+                dtempleado.appaterno = request.appaterno;
+                dtempleado.apmaterno = request.apmaterno;
+                dtempleado.rol = request.rol;
+                dtempleado.activo = request.activo;
 
             await context.SaveChangesAsync();
             return true;

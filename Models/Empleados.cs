@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -15,7 +15,6 @@ namespace rinku.Models
         public string nombre { set; get; }
         public string appaterno { get; set; }
         public string apmaterno { get; set; }
-        public DateTime fecha_nacimiento { get; set; }
         public string rol { get; set; } 
         public bool activo { get; set; }
 

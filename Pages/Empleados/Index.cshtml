@@ -1,0 +1,45 @@
+@page 
+@using rinku.Pages.Empleados
+@model IndexModel
+@{
+    var i = 1;
+} 
+<h2>Registro de empleados</h2>
+<div class="row"> 
+    <a asp-page="./Crear" role="button" class="btn btn-success">Crear</a>
+</div>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Numero Empleado</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apelido Paterno</th>
+        <th scope="col">Apellido Materno</th>
+        <th scope="col">Rol</th>
+        <th scope="col">Actuvo</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var emp in Model.empleados)
+    {
+    <tr>
+      <td>@i</td>
+      <td>@emp.num_empleados</td>
+      <td>@emp.nombre</td>
+      <td>@emp.appaterno</td>
+      <td>@emp.apmaterno</td>
+      <td>@emp.rol</td>
+      <td>@emp.activo</td>
+       <td><a asp-page="./Borrar" asp-route-num_empleados="@emp.num_empleados" class="btn btn-info">Borrar </a>
+      <a asp-page="./Actualizar" asp-route-num_empleados="@emp.num_empleados" class="btn btn-info">Editar </a>
+    </td> 
+    </tr>
+        i++;
+    }
+   
+  </tbody>
+</table>
+
+

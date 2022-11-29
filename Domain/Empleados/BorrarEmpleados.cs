@@ -26,9 +26,9 @@ namespace rinku.Domain
         }
         public async Task<bool> Handle(BorrarEmpleados request, CancellationToken cancellationToken)
         {
-            var res = await context.empleado.Where(emp => emp.num_empleados == request.num_empleados).FirstOrDefaultAsync();
+            var res = await context.empleados.Where(emp => emp.num_empleados == request.num_empleados).FirstOrDefaultAsync();
             if(res== null)return false;
-                context.empleado.Remove(res);
+                context.empleados.Remove(res);
                 await context.SaveChangesAsync();
                 return true;
         }   

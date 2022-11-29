@@ -1,0 +1,32 @@
+@page
+@using rinku.Pages.Movimientosmes
+@model CrearModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h1> Registras un empleado </h1>
+
+<div asp-validation-summary="All"></div>
+<form method="POST">
+  <div class="form-group">
+   
+    <div class="form-group">
+      <label for="num_empleados">Numero De empleado</label>
+      <input type="text" class="form-control"
+          name="num_empleados" id="num_empleados" aria-describedby="">
+      </div>
+
+    <div class="form-group">
+      <label for="mes">Mes</label>
+      <input type="text" class="form-control"
+          name="mes" id="mes" aria-describedby="">
+      
+    </div>
+    
+    <div class="form-group">
+      <label for="catidad_entregas">Cantidad de paquetes entregados</label>
+      <input type="" class="form-control"
+          name="catidad_entregas" id="catidad_entregas" aria-describedby="">      
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Crear</button>
+</form>
